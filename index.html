@@ -1,225 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            /* background-color: #4CAF50; */
-            background-color: #800020;
-            padding: 10px;
-        }
-        .navbar-nav .nav-link {
-            color: white !important;
-            margin: 0 10px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-        }
-        .header-text {
-            margin-left: 20px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            color: #800020;
-        }
-        .header p {
-            margin: 5px 0;
-            font-size: 16px;
-            color: #555;
-        }
-        .section {
-            margin-top: 30px;
-        }
-        .section h2 {
-            font-size: 20px;
-            color: #800020;
-            margin-bottom: 10px;
-        }
-        .section p {
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #f1f1f1;
-            margin-top: 40px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dilushi Piumwardane – Academic Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+      background-color: #fafafa;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #800020;
+      color: #fff;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 23%;
+      min-width: 250px;
+      padding: 40px 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .sidebar img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #fff;
+    }
+
+    .sidebar h1 {
+      font-size: 22px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .sidebar p {
+      font-size: 14px;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    .sidebar nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      display: block;
+      padding: 8px 0;
+      font-size: 15px;
+      width: 100%;
+      transition: color 0.3s;
+    }
+
+    .sidebar nav a:hover {
+      color: #ffd6d6;
+    }
+
+    /* Content Area */
+    .content {
+      margin-left: 23%;
+      padding: 50px 60px;
+      min-height: 100vh;
+      background-color: #fff;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      color: #800020;
+      font-size: 24px;
+      border-bottom: 2px solid #800020;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .section p, .section li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .sidebar img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+
+      .sidebar nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .sidebar nav a {
+        margin: 5px 10px;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 30px 20px;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .content {
+        padding: 70px 100px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="Dilushi.jpg" alt="Profile Photo" />
+    <h1>Dilushi Piumwardane</h1>
+    <p>PhD, Uppsala University</p>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-sm navbar-dark">
-    <div class="container">
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#research">Research</a></li> -->
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-            <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-            <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
-        </ul>
-    </div>
-</nav>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#projects">Projects</a>
+      <a href="#awards">Awards</a>
+      <a href="#publications">Publications</a>
+      <a href="#service">Service</a>
+      <a href="#misc">Miscellaneous</a>
+    </nav>
+  </div>
 
-<div class="container">
-    <!-- Header Section -->
-    <div class="header">
-        <img src="Dilushi.jpg" alt="Your Photo" class="profile-img">
-        <div class="header-text">
-            <h1>Dilushi Piumwardane</h1>
-                    </div>
-    </div>
+  <!-- Main Content -->
+  <div class="content">
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <p>
+        I received my PhD degree from Uppsala University in June 2024. The main focus of my thesis was on solving practical problems that occur when deploying multiple backscatter tags. 
+        I have more than seven years of experience working with low power communication technologies. 
+        I like to creatively solve real world problems.
+      </p>
+    </section>
 
-    <!-- About Section -->
-    <div class="section" id="about">
-        <h2>About Me</h2>
-        <p>I received my PhD degree from Uppsala University in June 2024. The main focus of my thesis was on solving practical problems that occur when deploying multiple backscatter tags. I have more than seven years of experience working with low power communication technologies. I like to creatively solve real world problems.</p>
-    </div>
+    <section class="section" id="news">
+      <h2>News</h2>
+      <ul>
+        <li>[Sept 2025] Our low-power transmitter is highlighted in this year's IVAs Tekniktal (IVA's Technology Talk) selected by the Royal Swedish Academy of Engineering Sciences as one of the 30 most promising research projects in Sweden. <span style="color:#FF0000">New!</span></li>
+        <li>[Sept 2025] Presented my work at EWSN Rising Stars Forum and won the Best Presentation Award. Also delivered the Rising Star Talk at the conference. <span style="color:#FF0000">New!</span></li>
+        <li>[Sept 2025] Attended the 12th Heidelberg Laureate Forum. <span style="color:#FF0000">New!</span></li>
+        <li>[Aug 2025] Our paper on localization with Analog Backscatter is accepted to MSWiM (24% acceptance rate). This is a joint work with Prof. Domenico Giustiniano from IMDEA Networks, Spain.</li>
+        <li>[June 2025] Gave an invited talk at Politecnico di Milano.</li>
+        <li>[October 2024] Secured an international collaboration grant by Vinnova to work on Analog Backscatter and 6G. Excited to collaborate with our project partners from USA, Italy, Finland and Sweden.</li>
+        <li>[June 2024] Our paper titled <em>"Unlocking the Potential of Low-Cost High-Resolution Sensing with Analog Backscatter"</em> won the Best Paper Award at IEEE RFID 2024.</li>
+        <li>[June 2024] Successfully defended my PhD thesis.</li>
+      </ul>
+    </section>
 
-    <!-- News Section -->
-    <div class="section" id="research">
-        <h2>News</h2>
-        <ul>
-            <li>[Sept 2025] Our low-power transmitter is highlighte in this year's  IVAs Tekniktal (IVA's Technology Talk) selected by the Royal Swedish Academy of Engineering Sciences as 30 most promising research projects in Sweden. <span style="color:#FF0000">New!</span></li> 
-            <li>[Sept 2025] Presented my work at EWSN Rising Stars Forum and won the best presentation award. Also delivered the Rising Star Talk at the conference. <span style="color:#FF0000">New!</span></li> 
-            <li>[Sept 2025] Attended the 12th HLF Forum. <span style="color:#FF0000">New!</span></li> 
-            <li>[Aug 2025] Our paper on localization with Analog Backscatter is accepted to MSWiM (24% acceptance rate). This is a joint work with Prof. Domenico Giustiniano from IMDEA Networks, Spain.</li> 
-            <li>[June 2025] Gave an invited talk at Politecnico di Milano.</li>
-            <li>[October 2024] Secured an international collaboration grant by Vinnova to work on Analog Backscatter and 6G. Excited to collaborate with our project partners from USA, Italy, Finland and Sweden.</li>
-            <li>[June 2024]  Our paper titled "Unlocking the Potential of Low-Cost High-Resolution Sensing with Analog Backscatter" won the best paper award at IEEE RFID 2024 conference.</li>
-            <li>[June 2024] Successfully defended my PhD thesis.</li>
-        </ul>
-    </div>
+    <section class="section" id="projects">
+      <h2>Selected Projects</h2>
+      <ul>
+        <li><strong>Low-power Transmitters:</strong> Low-power wireless technologies such as backscatter communication have revolutionized battery-free sensing by enabling data transmission with very low energy consumption. 
+          Unlike conventional wireless transmitters, backscatter devices eliminate the need to generate a carrier signal, instead modulating information onto existing RF waves from dedicated or ambient sources such as RFID readers, TV towers, or FM broadcasts.
+          In this work, we overcome this constraint and demonstrate that wireless data transmission is possible without relying on any generated or ambient RF source. Leveraging the unique properties of tunnel diodes, we design an ultra-low-power signal generator capable of producing a stable, harmonic-free carrier that can be modulated for long-range communication.
+          Our prototype achieves kilometre-scale transmission while consuming only microwatts of power at the front end, paving the way for a new class of self-sustaining, zero-energy wireless systems.
+        </li>
+        <li><strong>Analog Backscatter:</strong> Analog backscatter tags are highly resource-constrained and lack essential network functionalities such as identification, querying and channel sensing mechanisms. In the first project we introduced a novel harmonics-based tag identification method, based on musical instrument identification. 
 
-    <!-- Projects Section -->
-    <!-- <div class="section" id="projects">
-        <h2>Selected Projects</h2>
-        <p>Highlight a few key projects you have worked on or are currently working on.</p>
-        <ul>
-            <li><strong>Project 1:</strong> Short description. <a href="link-to-project">Learn more</a></li>
-            <li><strong>Project 2:</strong> Short description. <a href="link-to-project">Learn more</a></li>
-            <li><strong>Project 3:</strong> Short description. <a href="link-to-project">Learn more</a></li>
-        </ul>
-    </div> -->
+        Backscatter tags are known for their frequency agnostic behaviour, and reflect any given carrier frequency, posing limitations to identification and querying when multiple tags are active. 
+          To overcome this, in a follow-up work we develop a desynchronization technique that enables decoding of individual tag signals. 
 
-    <!-- Awards Section -->
-    <div class="section" id="awards">
-        <h2>Awards</h2>
-        <ul>
-            <li>Highlighted in IVA's Technology Talk by the Royal Swedish Academy of Engineering Sciences 2025</li> 
-            <li>Best Presentation Award at the Rising Stars Forum in EWSN 2025 </li> 
-            <li>Selected for the HLF (Heidelberg Laureate Forum) 2025 </li> 
-            <li>Best Paper Award- IEEE RFID 2024</li>
-            <li>Pass-it-on Award (PIO) 2017  by Anita Borg Institute</li>
-            <li>Google Women Techmakers Award APAC 2016</li>
-        </ul>
-    </div>
+          Analog backscatter tags typically encode sensor data as frequency shifts of the carrier signal. Therefore, representing high bandwidth sensor data with high resolution demands increased power due to high-frequency switching at the tag. We propose and demonstrate a system that uses higher harmonic expansion to achieve high-resolution sensing without raising the tag's power consumption, enabling portable, low-cost setups with receivers like an RTL-SDR dongle. 
+          
+          In another project we implemented channel estimation mechanisms for analog tags and used them for external RF source localization.</li> 
+        <li><strong>Digital Backscatter:</strong> Digital backscatter tags are capable of communicating with packets, allowing seamless integration into standards-based networks. However, achieving multi-hop is challenging due to limited transmission range and the low-power nature of receiver tags.We demonstrate the first multi-hop tag-to-tag backscatter network where tags can decode, modify, and forward packets. 
+          The tag-to-tag network consists of tags capable of both transmitting and receiving packets, allowing multi-hop communication that extends range and improves reliability in packet reception. 
 
-    <!-- Publications Section -->
-    <div class="section" id="publications">
-        <h2>Selected Publications</h2>
-        <p>Most relevant and selected papers in the recent years.</p>
-        <ul>
-            <li>Localization and Tracking of Ambient RF Sources with Analog Backscatter Tags <br>
-                M. Padmal, D. Piumwardane, D. Giustiniano, and T. Voigt. <br> 
-                To appear: MSWiM 2025.
-                </li><br> 
+          Another project I worked on is carrier-scheduling. Interoperability between backscatter devices and commodity networks requires efficient carrier provisioning, to enhance network scalability and performance. We developed a fast carrier scheduling algorithm and a system that leverages standard sensor nodes to provide the unmodulated carrier needed by battery-free tags. The system optimally allocates carriers to backscatter tags, minimizing interference and maximizing throughput in dense deployments. 
+        </li>
+        <li><strong>Security:</strong> Low-power devices like backscatter tags trade off complexity for low power consumption, limiting the use of 
+          encryption and exposing systems to security threats. RF fingerprinting, which requires no additional resources, aligns with the low-power design philosophy of backscatter systems. In this project we applied RF fingerprinting with machine learning for digital backscatter source identification.</li> 
+      </ul>
+    </section>
 
-            <li>Desynchronized Querying of Analog Backscatter Tags <br>
-                D. Piumwardane, M. Padmal, C. Rohner, and T. Voigt. <br> 
-                DCOSS-IoT 2025. 
-                <a href="https://ieeexplore.ieee.org/abstract/document/11096253">Link</a></li><br> 
+    <section class="section" id="awards">
+      <h2>Awards</h2>
+      <ul>
+        <li>Top 30 Technological Advancements in Sweden. Highlighted in IVA's Technology Talk by the Royal Swedish Academy of Engineering Sciences 2025</li>
+        <li>Best Presentation Award at the Rising Stars Forum in EWSN 2025</li>
+        <li>Young Researcher Selected by ACM for the Heidelberg Laureate Forum (HLF) 2025</li>
+        <li>Best Paper Award, IEEE RFID 2024</li>
+        <li>Pass-it-on Award (PIO) 2017 by Anita Borg Institute</li>
+        <li>Google Women Techmakers Award APAC 2016</li>
+      </ul>
+    </section>
 
-            <li>Unlocking the  Potential of Low-cost High-resolution Sensing with Analog Backscatter <br>
-                D. Piumwardane, M. Padmal, V. Ranganathan, K. Hewage, C. Rohner, and T. Voigt. <br> 
-                IEEE RFID 2024. <span style="color:#FF0000">Best Paper Award</span> <a href="https://ieeexplore.ieee.org/document/10582681">Link</a></li><br> 
+    <section class="section" id="publications">
+      <h2>Selected Publications</h2>
+      <p>Most relevant and selected papers in recent years.</p>
+      <ul>
+        <li><strong>Localization and Tracking of Ambient RF Sources with Analog Backscatter Tags</strong><br>
+          M. Padmal, D. Piumwardane, D. Giustiniano, and T. Voigt.<br>
+           MSWiM 2025.
+        </li><br>
+        <li><strong>Desynchronized Querying of Analog Backscatter Tags</strong><br>
+          D. Piumwardane, M. Padmal, C. Rohner, and T. Voigt.<br>
+          DCOSS-IoT 2025. <a href="https://ieeexplore.ieee.org/abstract/document/11096253">Link</a>
+        </li><br>
+        <li><strong>Unlocking the Potential of Low-cost High-resolution Sensing with Analog Backscatter</strong><br>
+          D. Piumwardane, M. Padmal, V. Ranganathan, K. Hewage, C. Rohner, and T. Voigt.<br>
+          IEEE RFID 2024. <span style="color:#FF0000">Best Paper Award</span> <a href="https://ieeexplore.ieee.org/document/10582681">Link</a>
+        </li><br>
+        <li><strong>Channel Estimation for Analog Backscatter Tags</strong><br>
+          M. Padmal, D. Piumwardane, C. Rohner, and T. Voigt.<br>
+          RFCom Workshop, co-located with SenSys 2024 – <a href="https://uu.diva-portal.org/smash/get/diva2:1923084/FULLTEXT01.pdf">Link</a>
+        </li><br>
+        <li><strong>HarmonicID: An Identification System for Low-Power Analog Backscatter Tags</strong><br>
+          D. Piumwardane, M. Padmal, V. Ranganathan, C. Rohner, and T. Voigt.<br>
+          IEEE RFID 2022 <a href="https://uu.diva-portal.org/smash/get/diva2:1696633/FULLTEXT02.pdf">Link</a>
+        </li><br>
+        <li><strong>Reliable Flooding in Dense Backscatter-based Tag-to-Tag Networks</strong><br>
+          D. Piumwardane, C. Rohner, and T. Voigt.<br>
+          IEEE RFID 2021 <a href="https://www.diva-portal.org/smash/get/diva2:1593471/FULLTEXT01.pdf">Link</a>
+        </li><br>
+        <li><strong>A Fast Carrier Scheduling Algorithm for Battery-free Sensor Tags in Commodity Wireless Networks</strong><br>
+          C. Pérez-Penichet, D. Piumwardane, C. Rohner, and T. Voigt.<br>
+          INFOCOM 2021 <a href="https://user.it.uu.se/~carpe933/papers/perez-penichet_fast_2020.pdf">Link</a>
+        </li><br>
+        <li><strong>Tagalong: Efficient Integration of Battery-free Sensor Tags in Standard Wireless Networks</strong><br>
+          C. Pérez-Penichet, D. Piumwardane, C. Rohner, and T. Voigt.<br>
+          IPSN 2020 <a href="https://ieeexplore.ieee.org/document/9111010">Link</a>
+        </li><br>
+        <li><strong>Modelling Battery-free Communications for the Cooja Simulator</strong><br>
+          C. Pérez-Penichet, G. T. Daglaridis, D. Piumwardane, and T. Voigt.<br>
+          EWSN 2019 <a href="https://dl.acm.org/doi/10.5555/3324320.3324327">Link</a>
+        </li>
+      </ul>
+    </section>
 
-            <li>Channel estimation for analog backscatter tags <br>
-                M. Padmal, D. Piumwardane, C. Rohner, and T. Voigt. <br>
-                RFCom Workshop, co-located with SenSys 2024- <a href="https://uu.diva-portal.org/smash/get/diva2:1923084/FULLTEXT01.pdf">Link</a></li><br> 
+    <section class="section" id="service">
+      <h2>Service</h2>
+      <ul>
+        <li>Webchair for IEEE RFID 2025</li>
+        <li>TPC Member for IEEE RFID 2025</li>
+        <li>TPC Member for IEEE Sensors Applications Symposium (SAS) 2025</li>
+        <li>Reviewer for IEEE Communications Standards Magazine, IEEE Communications Letters 2025</li>
+        <li>Reviewer for IEEE Sensors 2024</li>
+        <li>External Reviewer for EWSN 2022, MASS 2022</li>
+      </ul>
+      <p>I have contributed as an external reviewer for other conferences since the beginning of my PhD.</p>
+    </section>
 
+    <section class="section" id="misc">
+      <h2>Miscellaneous</h2>
+      <ul>
+        <li>Interested in science communication. Recently did an activity at SCIFEST 2024 for school kids based on our HarmonicID work.</li>
+        <li>Passionate about including everyone to explore science. Co-founded an organization to introduce computing to kids who otherwise do not have access to these resources. Was invited as a panelist/speaker to GHC 2017.</li>
+        <li>I love playing the piano and singing during my free time. I have an ATCL in piano and have been in multiple choirs. I was also an accompanist at Methodist Church Sri Lanka before starting my PhD. Checkout my occasional hymn uploads: <a href="https://www.youtube.com/channel/UCWpYCnnD2aY0cXuGXgT44Bg">YouTube</a></li>
+      </ul>
+    </section>
 
-            <li>HarmonicID: An Identification System for Low-Power Analog Backscatter Tags <br>
-                D. Piumwardane, M. Padmal, V. Ranganathan, C. Rohner, and T. Voigt. <br>
-                IEEE RFID 2022 <a href="https://uu.diva-portal.org/smash/get/diva2:1696633/FULLTEXT02.pdf">Link</a></li><br> 
-
-            <li>Reliable Flooding in Dense Backscatter-based Tag-to-Tag Networks<br>
-                D. Piumwardane, C. Rohner, and T. Voigt. <br>
-                IEEE RFID 2021 <a href="https://www.diva-portal.org/smash/get/diva2:1593471/FULLTEXT01.pdf">Link</a></li>  <br> 
-
-             <li>A fast carrier scheduling algorithm for battery-free sensor tags in commodity wireless networks<br>
-                C. Pérez-Penichet, D. Piumwardane, C. Rohner, and T. Voigt. <br>
-                INFOCOM 2021 <a href="https://user.it.uu.se/~carpe933/papers/perez-penichet_fast_2020.pdf">Link</a></li>  <br> 
-
-             <li>Tagalong: Efficient integration of battery-free sensor tags in standard wireless networks<br>
-                C. Pérez-Penichet, D. Piumwardane, C. Rohner, and T. Voigt. <br>
-                IPSN 2020 <a href="https://ieeexplore.ieee.org/document/9111010">Link</a></li> <br>  
-
-            <li>Modelling Battery-free Communications for the Cooja Simulator<br>
-                C. Pérez-Penichet, G. T. Daglaridis, D. Piumwardane, and T. Voigt. <br>
-                EWSN 2019 <a href="https://dl.acm.org/doi/10.5555/3324320.3324327">Link</a></li> <br>  
-
-
-        </ul>
-    </div>
-
-    <!-- Service Section -->
-    <div class="section" id="service">
-        <h2>Service</h2>
-        <ul>
-            <li>Webchair for IEEE RFID 2025</li>
-            <li>TPC member for IEEE RFID 2025</li>
-            <li>TPC member for IEEE Sensors Applications Symposium (SAS) 2025</li>
-            <li>Reviewer for IEEE Communications Standards Magazine, IEEE Communications Letters 2025</li>
-            <li>Reviewer for IEEE Sensors 2024</li>
-            <li>External Reviewer for EWSN 2022, MASS 2022</li>
-        </ul>
-        <p>I have contributed as an external reviewer for other conferences since the beginning of my PhD.</p>
-    </div>
-
-    <!-- Misc Section -->
-    <div class="section" id="publications">
-        <h2>Misc.</h2>
-        <ul>
-            
-            <li>Interested in science communication. Recently did an activity at SCIFEST 2024 for school kids based on our harmonicID work.</li>
-            <li>Passionate about including everyone to explore science. Co-founded an organization to introduce computing to kids who otherwise do not have access to these resources. Was invited as a panelist/speaker to GHC 2017.</li>
-            <li>I love playing the piano and singing during my free time. I have an ATCL in piano and have been in multiple choirs. I was also  an accompanist at Methodist Church Sri Lanka, before starting my PhD. Checkout my occasional hymn uploads- <a href="https://www.youtube.com/channel/UCWpYCnnD2aY0cXuGXgT44Bg">Link</a></li> 
-        </ul>
-    </div>
-
-</div>
-
-<!-- Footer Section -->
-<footer>
+    <footer>
+      © 2025 Dilushi Piumwardane — Last updated: November 2025
     </footer>
-
-<!-- Bootstrap Scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </div>
 </body>
 </html>

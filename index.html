@@ -138,6 +138,25 @@
         padding: 70px 100px;
       }
     }
+    /* Favorite Captures Gallery */
+.capture-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capture-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.capture-item {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
   </style>
 </head>
 
@@ -156,6 +175,8 @@
       <a href="#publications">Publications</a>
       <a href="#service">Service</a>
       <a href="#misc">Miscellaneous</a>
+      <a href="#favoritecaptures">Favorite Captures</a>
+
     </nav>
   </div>
 
@@ -166,7 +187,7 @@
       <p>
         I received my PhD degree from Uppsala University in June 2024. The main focus of my thesis was on solving practical problems that occur when deploying multiple backscatter tags. 
         I have more than seven years of experience working with low power communication technologies. 
-        I like to creatively solve real world problems.
+        I like to creatively solve real world problems. Scroll to the boottom to see some of my favorite captures! 
       </p>
     </section>
 
@@ -292,6 +313,96 @@
         <li>I love playing the piano and singing during my free time. I have an ATCL in piano and have been in multiple choirs. I was also an accompanist at Methodist Church Sri Lanka before starting my PhD. Checkout my occasional hymn uploads: <a href="https://www.youtube.com/channel/UCWpYCnnD2aY0cXuGXgT44Bg">YouTube</a></li>
       </ul>
     </section>
+
+    <section class="section" id="favoritecaptures">
+      <h2>Favorite Captures</h2>
+    <!-- IVA, defense, PIO award, NASA, Belgium, anitaborg, includeorph, best paper, vint cerf, boat trip, first in sweden, music-->
+      <div class="container-fluid p-0">
+        <div class="row g-4 capture-grid">
+    
+          <!-- Image 1 -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture1.jpg" alt="Capture 1">
+            </div>
+            <div class="capture-caption">Best Paper Award</div>
+          </div>
+    
+          <!-- Image 2 -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture2.jpg" alt="Capture 2">
+            </div>
+            <div class="capture-caption">On a boat ride with Whitfield Diffie
+            </div>
+          </div>
+    
+          <!-- Image 3 -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture3.jpg" alt="Capture 3">
+            </div>
+            <div class="capture-caption">Inter-planetary internet convo with Vint Cerf</div>
+          </div>
+    
+          <!-- Image 4 -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture4.jpg" alt="Capture 4">
+            </div>
+            <div class="capture-caption">First time at NASA</div>
+          </div>
+    
+          <!-- Image 5 -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture5.jpg" alt="Capture 5">
+            </div>
+            <div class="capture-caption">Co-founding IncludeOrph</div>
+          </div>
+    
+          <!-- Image 6 -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture6.jpg" alt="Capture 6">
+            </div>
+            <div class="capture-caption">Women Techmakers Scholarship- APAC</div>
+          </div>
+    
+          <!-- Image 7 -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture7.jpg" alt="Capture 7">
+            </div>
+             <div class="capture-caption">First Day in Sweden for my PhD</div>
+          </div>
+    
+          <!-- Image 8 -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture8.jpg" alt="Capture 8">
+            </div>
+            <div class="capture-caption">Panelist at Grace Hopper Conference</div>
+          </div>
+    
+          <!-- Image 9 -->
+          <!-- <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture9.jpg" >
+            </div>
+          </div> -->
+    
+          <!-- Image 10 -->
+          <!-- <div class="col-12 col-sm-6 col-md-3">
+            <div class="capture-item">
+              <img src="captures/capture10.jpg">
+            </div>
+          </div> -->
+    
+        </div>
+      </div>
+    </section>
+    
 
     <footer>
       © 2025 Dilushi Piumwardane — Last updated: November 2025
